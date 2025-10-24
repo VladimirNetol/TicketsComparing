@@ -1,1 +1,1 @@
-[![Java CI with Maven](https://github.com/VladimirNetol/TicketsComparing/actions/workflows/maven.yml/badge.svg)](https://github.com/VladimirNetol/TicketsComparing/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/VladimirNetol/TicketsComparing/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/VladimirNetol/TicketsComparing/actions/workflows/maven.yml)
