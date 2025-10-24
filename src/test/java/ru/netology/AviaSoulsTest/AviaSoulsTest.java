@@ -77,4 +77,28 @@ class AviaSoulsTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void shouldFindAllTickets() {
+        Ticket[] expected = {ticket1, ticket2, ticket3, ticket4, ticket5, ticket6, ticket7};
+        Ticket[] actual = aviaSouls.findAll();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldFindBySearch() {
+        Ticket[] expected = {ticket4};
+        Ticket[] actual = aviaSouls.search("Москва", "Париж");
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldNotFindBySearch() {
+        Ticket[] expected = { };
+        Ticket[] actual = aviaSouls.search("Лондон", "Милан");
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }
