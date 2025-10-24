@@ -1,0 +1,1 @@
+[![Java CI with Maven](https://github.com/VladimirNetol/TicketsComparing/actions/workflows/maven.yml/badge.svg)](https://github.com/VladimirNetol/TicketsComparing/actions/workflows/maven.yml)
