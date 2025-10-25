@@ -17,6 +17,8 @@ class AviaSoulsTest {
     Ticket ticket5 = new Ticket("Липецк", "Ржев", 2500, 8, 12);
     Ticket ticket6 = new Ticket("Париж", "Москва", 3800, 10, 18);
     Ticket ticket7 = new Ticket("Северодвинск", "Североморск", 2500, 15, 19);
+    Ticket ticket8 = new Ticket("Москва", "Париж", 4800, 13, 17);
+
 
 
     @BeforeEach
@@ -28,6 +30,7 @@ class AviaSoulsTest {
         aviaSouls.add(ticket5);
         aviaSouls.add(ticket6);
         aviaSouls.add(ticket7);
+        aviaSouls.add(ticket8);
     }
 
     @Test
@@ -87,7 +90,7 @@ class AviaSoulsTest {
     }
 
     @Test
-    public void shouldFindBySearch() {
+    public void shouldFindOneTicketBySearch() {
         Ticket[] expected = {ticket4};
         Ticket[] actual = aviaSouls.search("Москва", "Париж");
 
@@ -98,6 +101,13 @@ class AviaSoulsTest {
     public void shouldNotFindBySearch() {
         Ticket[] expected = { };
         Ticket[] actual = aviaSouls.search("Лондон", "Милан");
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+    @Test
+    public void shouldFindMultipleTicketsBySearch() {
+        Ticket[] expected = {ticket4, ticket8};
+        Ticket[] actual = aviaSouls.search("Москва", "Париж");
 
         Assertions.assertArrayEquals(expected, actual);
     }
