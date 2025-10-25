@@ -83,7 +83,7 @@ class AviaSoulsTest {
 
     @Test
     public void shouldFindAllTickets() {
-        Ticket[] expected = {ticket1, ticket2, ticket3, ticket4, ticket5, ticket6, ticket7};
+        Ticket[] expected = {ticket1, ticket2, ticket3, ticket4, ticket5, ticket6, ticket7, ticket8};
         Ticket[] actual = aviaSouls.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
@@ -91,8 +91,8 @@ class AviaSoulsTest {
 
     @Test
     public void shouldFindOneTicketBySearch() {
-        Ticket[] expected = {ticket4};
-        Ticket[] actual = aviaSouls.search("Москва", "Париж");
+        Ticket[] expected = {ticket6};
+        Ticket[] actual = aviaSouls.search("Париж", "Москва");
 
         Assertions.assertArrayEquals(expected, actual);
     }
